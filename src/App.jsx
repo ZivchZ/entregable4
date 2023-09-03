@@ -18,7 +18,7 @@ function App() {
 
   //! Función para obtener Usuarios
     const getAllUsers = () => {
-      axios.get("https://users-crud.academlo.tech/users/")
+      axios.get("https://users-crud-u1sl.onrender.com/users")
       .then(resp => setUsersList(resp.data))
       .catch(error => console.error(error))
     }
@@ -31,7 +31,7 @@ function App() {
   //! Función para Crear/Añadir nuevo usuario
     const addUser = newUser => {
       
-      axios.post('https://users-crud.academlo.tech/users/', newUser)
+      axios.post('https://users-crud-u1sl.onrender.com/users', newUser)
       .then(() => {
         getAllUsers()
         setUserSelected(null)
@@ -47,7 +47,7 @@ function App() {
     //! Función para eliminar un usuario
     const deleteUser = (id) => {
 
-      axios.delete(`https://users-crud.academlo.tech/users/${id}/`)
+      axios.delete(`https://users-crud-u1sl.onrender.com/users/${id}/`)
       .then(() => {
         getAllUsers()
       })
@@ -57,7 +57,7 @@ function App() {
     //! Función para Editar/Modificar un usuario
     const editUser = (user) => {
 
-      axios.put(`https://users-crud.academlo.tech/users/${user.id}/`, user)
+      axios.put(`https://users-crud-u1sl.onrender.com/users/${user.id}/`, user)
       .then(() => {
         getAllUsers()
         setUserSelected(null)

@@ -28,16 +28,18 @@ const UsersList = ({usersList, deleteUser, selectUser, showForm}) => {
                     showAlert(true)
                     }}className="delete"><i className='bx bx-trash'></i></button>
                     </div>
-                </li>
-                    ))
-                }
-            </ul>
-
-                <div className={`${show === true ? 'card-delete-visible' : 'card-delete'}`}>
+                    <div className={`${show === true ? 'card-delete-visible' : 'card-delete'}`}>
                     <h3>Usuario Eliminado</h3>
                     <p>El usuario fué eliminado satisfactoriamente</p>
                     <button onClick={showAlert}>Aceptar</button>
-                </div>
+                </div> 
+                </li>
+                    ))
+                    
+                }
+            </ul>
+
+                
 
         </>
     )
